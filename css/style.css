@@ -1,0 +1,156 @@
+*, ::before, ::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.trans {
+    color: white;
+    font-size: 16px;
+}
+.label {
+    color: #fff;
+    font-size: 20px;
+    padding: 0.5rem 0;
+}
+
+h1 {
+    font-size: 1.2rem;
+}
+
+#date_time {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem;
+    background: magenta;
+}
+
+#current-time {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+
+#intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#intro span {
+    display: flex;
+}
+
+#keys {
+    width: 100%;
+}
+
+.typing {
+    position: relative;
+    margin-left: 10px;
+    color: gray;
+}
+
+.typing::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    width: 1px;
+    height: 90%;
+    border-right: 2px solid gray;
+    animation: blink 1s infinite ease;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+#ul_list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr;
+}
+
+.rice, .book, .sport, .game, .reading {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    width: 100%;
+    padding: 2rem;
+}
+
+span {
+    display: inline-block;
+}
+
+
+.rice span:nth-child(1),
+.book span:nth-child(1),
+.sport span:nth-child(1),
+.game span:nth-child(1),
+.reading span:nth-child(1) {
+    width: 2px;
+    height: 100%;
+    background: gray;
+}
+
+.rice span:nth-child(3), 
+.book span:nth-child(3),
+.sport span:nth-child(3),
+.game span:nth-child(3),
+.reading span:nth-child(3) {
+    justify-self: flex-end;
+}
+
+#form_box {
+    display: flex;
+    padding: 2rem;
+}
+
+form {
+    width: 100%;
+    flex-wrap:  wrap;
+    justify-content: space-between;
+    display: flex;
+}
+
+.hide {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+[type="text"] {
+    padding: .5rem;
+    width: 80%;
+    outline: none;
+    border: 1px solid magenta;
+    border-radius: 5px;
+}
+
+[type="text"]+button {
+    border: none;
+    background: magenta;
+    padding: 0.5rem;
+    outline: none;
+    border-radius: 5px;
+}
+
+
